@@ -2,7 +2,6 @@ package com.github.lorcanluo.logfile;
 
 
 /**
- *
  * @author luocan
  * @version 1.0
  *          </p>
@@ -50,6 +49,10 @@ public class LogHtml {
             return;
         }
 
+        if (mLogQueue == null) {
+            throw new NullPointerException("Must call init method first!");
+        }
+
         LogMsg logMsg = new LogMsg();
         logMsg.setTag(tag);
         logMsg.setMsg(msg);
@@ -68,6 +71,10 @@ public class LogHtml {
     public static void i(String tag, String msg) {
         if (!isDebuggable) {
             return;
+        }
+
+        if (mLogQueue == null) {
+            throw new NullPointerException("Must call init method first!");
         }
 
         LogMsg logMsg = new LogMsg();
@@ -90,6 +97,9 @@ public class LogHtml {
             return;
         }
 
+        if (mLogQueue == null) {
+            throw new NullPointerException("Must call init method first!");
+        }
 
         LogMsg logMsg = new LogMsg();
         logMsg.setTag(tag);

@@ -17,20 +17,32 @@ public class LogQueue {
 
 
     public void add(LogMsg logMsg) {
-        mLogQueue.add(logMsg);
+        try {
+            mLogQueue.add(logMsg);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 
     public void start() {
         stop();
 
-        logExecutor = new LogExecutor(mLogQueue);
-        logExecutor.start();
+        try {
+            logExecutor = new LogExecutor(mLogQueue);
+            logExecutor.start();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void stop() {
-        if (logExecutor != null) {
-            logExecutor.quit();
+        try {
+            if (logExecutor != null) {
+                logExecutor.quit();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }
