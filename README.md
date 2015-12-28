@@ -1,8 +1,10 @@
-# LogHtml
+# LogLocal
 
 在日常开发过程中，一些后台服务，比如IM，后台定时任务，都需要一套本地日志系统来监控程序是否正常，Android本身提供的日志系统只能在终端显示，为了模拟一套和android Log系统相同的环境，我自己写了一套本地日志系统来解决以上问题。
 
-为了能让不同等级的日志以不同的颜色显示，我用html的方式来实现，这样我们通过浏览器打开就可以了。
+为了能让不同等级的日志以不同的颜色显示，我用html的方式来实现，这样我们通过浏览器打开就可以了。演示效果如下：
+![htmldemoimg](https://github.com/lorcanluo/myHugoProject/blob/master/myImage/loghtml/htmldemo.png?raw=true)
+
 github地址: <https://github.com/lorcanluo/LogHtml>
 
 ##使用方法
