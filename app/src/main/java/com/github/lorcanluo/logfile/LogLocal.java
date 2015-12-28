@@ -7,7 +7,7 @@ package com.github.lorcanluo.logfile;
  *          </p>
  *          Created on 15/12/25.
  */
-public class LogHtml {
+public class LogLocal {
 
     private static boolean isDebuggable = true;
     private static LogQueue mLogQueue;
@@ -34,7 +34,7 @@ public class LogHtml {
      * @param isDebuggable if set to false, not print the message.
      */
     public static void setIsDebuggable(boolean isDebuggable) {
-        LogHtml.isDebuggable = isDebuggable;
+        LogLocal.isDebuggable = isDebuggable;
     }
 
     /**

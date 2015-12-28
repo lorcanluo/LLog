@@ -129,7 +129,7 @@ public class LogExecutor extends Thread {
 
         File storageRoot = Environment.getExternalStorageDirectory();
 
-        String path = LogHtml.getRootPath() + File.separator + "log";                //日志文件目录
+        String path = LogLocal.getRootPath() + File.separator + "log";                //日志文件目录
 
         File tmpFile = new File(storageRoot.getAbsolutePath().concat(File.separator).concat(path));
 
