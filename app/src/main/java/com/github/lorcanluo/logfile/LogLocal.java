@@ -62,6 +62,30 @@ public class LogLocal {
 
 
     /**
+     * warning log
+     *
+     * @param tag Used to identify the source of a log message.  It usually identifies
+     *            the class or activity where the log call occurs.
+     * @param msg The message you would like logged.
+     */
+    public static void w(String tag, String msg) {
+        if (!isDebuggable) {
+            return;
+        }
+
+        if (mLogQueue == null) {
+            throw new NullPointerException("Must call init method first!");
+        }
+
+        LogMsg logMsg = new LogMsg();
+        logMsg.setTag(tag);
+        logMsg.setMsg(msg);
+        logMsg.setPriority(LogMsg.WARNING);
+        mLogQueue.add(logMsg);
+    }
+
+
+    /**
      * info log
      *
      * @param tag Used to identify the source of a log message.  It usually identifies

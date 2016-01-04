@@ -10,6 +10,7 @@ public class LogMsg {
     public static final int INFO = 0x01;
     public static final int DEBUG = 0x02;
     public static final int ERROR = 0x03;
+    public static final int WARNING = 0x04;
 
     protected String mTag;
     protected String mMsg;

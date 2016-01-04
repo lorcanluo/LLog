@@ -68,6 +68,9 @@ public class LogExecutor extends Thread {
                 case LogMsg.ERROR:
                     builder.append("<font color=\"red\">");
                     break;
+                case LogMsg.WARNING:
+                    builder.append("<font color=\"#FFD306\">");
+                    break;
             }
 
             Calendar calendar = Calendar.getInstance();

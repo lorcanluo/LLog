@@ -17,5 +17,7 @@ public class MainActivity extends AppCompatActivity {
         LogLocal.e("MainActivity", "我都哇哦度哇哦对哇哦度哇哦度哇");
         LogLocal.i("MainActivity", "哎哟喂11111");
         LogLocal.d("MainActivity", "哎哟喂22222");
+        LogLocal.w("MainActivity", "哎哟喂22222");
+        LogLocal.w("MainActivity", "哎哟喂22222");
     }
 }
