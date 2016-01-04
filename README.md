@@ -53,6 +53,26 @@ LogLocal.init(this.getPackageName());
      
     }
 ```
+
+### 警告信息  
+在文件中以黄色色字体显示
+
+调用方法：
+
+```
+    /**
+     * 警告信息 log
+     *
+     * @param tag Used to identify the source of a log message.  It usually identifies
+     *            the class or activity where the log call occurs.
+     * @param msg The message you would like logged.
+     */
+    public static void w(String tag, String msg) {
+
+    }
+
+```
+
 ### 错误信息  
 在文件中以红色字体显示
 
