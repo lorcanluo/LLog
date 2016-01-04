@@ -12,7 +12,7 @@ github地址: <https://github.com/lorcanluo/LogHtml>
 在你的Application或则主Activity调用：
 
 ```
-LogHtml.init(this.getPackageName());
+LogLocal.init(this.getPackageName());
 ```
 
 方法来初始化，传入参数为你需要存放文件的目录。
