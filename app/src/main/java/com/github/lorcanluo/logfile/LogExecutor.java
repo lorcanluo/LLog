@@ -66,7 +66,7 @@ public class LogExecutor extends Thread {
                     builder.append("<font color=\"green\">");
                     break;
                 case LogMsg.ERROR:
-                    builder.append("<font color=\"red\">");
+                    builder.append("<font color=\"#fc0d1b\">");
                     break;
                 case LogMsg.WARNING:
                     builder.append("<font color=\"#FFD306\">");
