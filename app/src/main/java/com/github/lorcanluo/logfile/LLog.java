@@ -7,10 +7,10 @@ package com.github.lorcanluo.logfile;
  *          </p>
  *          Created on 15/12/25.
  */
-public class LogLocal {
+public class LLog {
 
     private static boolean isDebuggable = true;
-    private static LogQueue mLogQueue;
+    private static LQueue mLogQueue;
     private static String mRootPath;
 
 
@@ -18,7 +18,7 @@ public class LogLocal {
      * @param rootPath the log file path
      */
     public static void init(String rootPath) {
-        mLogQueue = new LogQueue();
+        mLogQueue = new LQueue();
         mLogQueue.start();
         mRootPath = rootPath;
     }
@@ -34,7 +34,7 @@ public class LogLocal {
      * @param isDebuggable if set to false, not print the message.
      */
     public static void setIsDebuggable(boolean isDebuggable) {
-        LogLocal.isDebuggable = isDebuggable;
+        LLog.isDebuggable = isDebuggable;
     }
 
     /**
@@ -53,10 +53,10 @@ public class LogLocal {
             throw new NullPointerException("Must call init method first!");
         }
 
-        LogMsg logMsg = new LogMsg();
+        LMsg logMsg = new LMsg();
         logMsg.setTag(tag);
         logMsg.setMsg(msg);
-        logMsg.setPriority(LogMsg.ERROR);
+        logMsg.setPriority(LMsg.ERROR);
         mLogQueue.add(logMsg);
     }
 
@@ -77,10 +77,10 @@ public class LogLocal {
             throw new NullPointerException("Must call init method first!");
         }
 
-        LogMsg logMsg = new LogMsg();
+        LMsg logMsg = new LMsg();
         logMsg.setTag(tag);
         logMsg.setMsg(msg);
-        logMsg.setPriority(LogMsg.WARNING);
+        logMsg.setPriority(LMsg.WARNING);
         mLogQueue.add(logMsg);
     }
 
@@ -101,10 +101,10 @@ public class LogLocal {
             throw new NullPointerException("Must call init method first!");
         }
 
-        LogMsg logMsg = new LogMsg();
+        LMsg logMsg = new LMsg();
         logMsg.setTag(tag);
         logMsg.setMsg(msg);
-        logMsg.setPriority(LogMsg.INFO);
+        logMsg.setPriority(LMsg.INFO);
         mLogQueue.add(logMsg);
     }
 
@@ -125,10 +125,10 @@ public class LogLocal {
             throw new NullPointerException("Must call init method first!");
         }
 
-        LogMsg logMsg = new LogMsg();
+        LMsg logMsg = new LMsg();
         logMsg.setTag(tag);
         logMsg.setMsg(msg);
-        logMsg.setPriority(LogMsg.DEBUG);
+        logMsg.setPriority(LMsg.DEBUG);
         mLogQueue.add(logMsg);
     }
 }

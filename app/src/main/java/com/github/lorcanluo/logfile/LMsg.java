@@ -6,7 +6,7 @@ package com.github.lorcanluo.logfile;
  *          </p>
  *          Created on 15/12/25.
  */
-public class LogMsg {
+public class LMsg {
     public static final int INFO = 0x01;
     public static final int DEBUG = 0x02;
     public static final int ERROR = 0x03;

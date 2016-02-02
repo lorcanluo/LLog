@@ -11,13 +11,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        LogLocal.init(this.getPackageName());
+        LLog.init(this.getPackageName());
 
-        LogLocal.d("MainActivity", "哎哟喂");
-        LogLocal.e("MainActivity", "我都哇哦度哇哦对哇哦度哇哦度哇");
-        LogLocal.i("MainActivity", "哎哟喂11111");
-        LogLocal.d("MainActivity", "哎哟喂22222");
-        LogLocal.w("MainActivity", "哎哟喂22222");
-        LogLocal.w("MainActivity", "哎哟喂22222");
+        LLog.d("MainActivity", "哎哟喂");
+        LLog.e("MainActivity", "我都哇哦度哇哦对哇哦度哇哦度哇");
+        LLog.i("MainActivity", "哎哟喂11111");
+        LLog.d("MainActivity", "哎哟喂22222");
+        LLog.w("MainActivity", "哎哟喂22222");
+        LLog.w("MainActivity", "哎哟喂22222");
     }
 }

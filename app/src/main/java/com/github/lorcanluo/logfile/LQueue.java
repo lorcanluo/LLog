@@ -10,13 +10,13 @@ import java.util.concurrent.LinkedBlockingQueue;
  *          </p>
  *          Created on 15/12/25.
  */
-public class LogQueue {
+public class LQueue {
 
-    private final LinkedBlockingQueue<LogMsg> mLogQueue = new LinkedBlockingQueue<LogMsg>();
-    private LogExecutor logExecutor;
+    private final LinkedBlockingQueue<LMsg> mLogQueue = new LinkedBlockingQueue<LMsg>();
+    private LExecutor logExecutor;
 
 
-    public void add(LogMsg logMsg) {
+    public void add(LMsg logMsg) {
         try {
             mLogQueue.add(logMsg);
         } catch (Exception e) {
@@ -29,7 +29,7 @@ public class LogQueue {
         stop();
 
         try {
-            logExecutor = new LogExecutor(mLogQueue);
+            logExecutor = new LExecutor(mLogQueue);
             logExecutor.start();
         } catch (Exception e) {
             e.printStackTrace();

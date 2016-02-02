@@ -21,16 +21,16 @@ import static android.os.Process.setThreadPriority;
  *          </p>
  *          Created on 15/12/25.
  */
-public class LogExecutor extends Thread {
+public class LExecutor extends Thread {
 
-    private final BlockingQueue<LogMsg> mQueue;
+    private final BlockingQueue<LMsg> mQueue;
 
     private volatile boolean mQuit = false;
 
     private static DateFormat mDateFormat = new SimpleDateFormat("yyyy-MM-dd");
     private static DateFormat mTimeFormat = new SimpleDateFormat("MM-dd HH:mm:ss");
 
-    public LogExecutor(BlockingQueue<LogMsg> mQueue) {
+    public LExecutor(BlockingQueue<LMsg> mQueue) {
         this.mQueue = mQueue;
     }
 
@@ -39,7 +39,7 @@ public class LogExecutor extends Thread {
         setThreadPriority(THREAD_PRIORITY_BACKGROUND);
 
         while (true) {
-            LogMsg logMsg;
+            LMsg logMsg;
             try {
 
                 logMsg = mQueue.take();
@@ -59,16 +59,16 @@ public class LogExecutor extends Thread {
             StringBuilder builder = new StringBuilder();
 
             switch (logMsg.getPriority()) {
-                case LogMsg.INFO:
+                case LMsg.INFO:
                     builder.append("<font color=\"black\">");
                     break;
-                case LogMsg.DEBUG:
+                case LMsg.DEBUG:
                     builder.append("<font color=\"green\">");
                     break;
-                case LogMsg.ERROR:
+                case LMsg.ERROR:
                     builder.append("<font color=\"#fc0d1b\">");
                     break;
-                case LogMsg.WARNING:
+                case LMsg.WARNING:
                     builder.append("<font color=\"#FFD306\">");
                     break;
             }
@@ -132,7 +132,7 @@ public class LogExecutor extends Thread {
 
         File storageRoot = Environment.getExternalStorageDirectory();
 
-        String path = LogLocal.getRootPath() + File.separator + "log";                //日志文件目录
+        String path = LLog.getRootPath() + File.separator + "log";                //日志文件目录
 
         File tmpFile = new File(storageRoot.getAbsolutePath().concat(File.separator).concat(path));
 
