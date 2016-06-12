@@ -1,4 +1,4 @@
-package com.github.lorcanluo.logfile;
+package com.lorcanluo.llog.library;
 
 
 import android.os.Environment;
@@ -10,7 +10,6 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 import java.util.concurrent.BlockingQueue;
-
 
 import static android.os.Process.THREAD_PRIORITY_BACKGROUND;
 import static android.os.Process.setThreadPriority;

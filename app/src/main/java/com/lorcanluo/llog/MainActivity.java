@@ -1,8 +1,9 @@
-package com.github.lorcanluo.logfile;
+package com.lorcanluo.llog;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.lorcanluo.llog.library.LLog;
 
 public class MainActivity extends AppCompatActivity {
 

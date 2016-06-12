@@ -1,4 +1,4 @@
-package com.github.lorcanluo.logfile;
+package com.lorcanluo.llog.library;
 
 
 import java.util.concurrent.LinkedBlockingQueue;

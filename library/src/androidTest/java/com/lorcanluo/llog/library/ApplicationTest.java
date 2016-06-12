@@ -1,4 +1,4 @@
-package com.github.lorcanluo.logfile;
+package com.lorcanluo.llog.library;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
